@@ -1,0 +1,112 @@
+.slider{
+    background-color: #000;
+    height: 1074px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider-description h1{
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: #E3B873;
+    margin-top: 176px;
+}
+
+.slider-description p{
+    line-height: 27px;
+    color: #FFFFFF;
+    margin-bottom: 42px;
+}
+
+.slider-navigation {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    min-height: 12px;
+}
+
+.dots{
+    width: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 18px;
+}
+
+.dots:nth-child(4){
+    margin-right:0;
+}
+
+.dots:nth-child(2){
+    background: white;
+}
+
+.arrow_left{
+    background-color: transparent;
+    width: 100px;
+    border: none;
+    background: url(../img/arrow-left.svg) center no-repeat;
+}
+
+
+.arrow_right{
+    background-color: transparent;
+    width: 100px;
+    border: none;
+    background: url(../img/arrow-right.svg) center no-repeat;
+}
+
+.slider-place{
+    margin-top: 107px;
+}
+
+.slider-plase-cities{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 53px;
+}
+
+.slider-plase-cities a{
+    text-transform: uppercase;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.slider-plase-cities a:first-child{
+    color: #E3B873;
+    position: relative;
+}
+
+.slider-plase-cities a:first-child::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    bottom: -6px;
+    width: 100%;
+    background-color: #be8739;
+    height: 1px;
+}
+
+.slider-plase-cities a::before:first-child{
+    color: #E3B873;
+}
+
+.slider-more-detailes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detailes-item {
+    width: 50%;
+}
+
+.detailes-item h2{
+    text-transform: uppercase;
+    color: #E3B873;
+    font-family: Yeseva One;
+    font-size: 18px;
+    line-height: 25px;
+}

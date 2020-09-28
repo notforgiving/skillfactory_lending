@@ -1,0 +1,49 @@
+.online-control {
+    transform: translateY(-350px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.online-control h2{
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.camera{
+    position: relative;
+}
+
+.camera:before{
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #be8739;
+}
+
+.camera::after{
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #be8739;
+}
+
+.online-control-video{
+    position: relative;
+}

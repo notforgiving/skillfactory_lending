@@ -4,6 +4,7 @@ body{
     color: #FFFFFF;
     margin: 0 auto;
     width: 1440px;
+    font-size: 14px;
 }
 
 ul,h1{
@@ -14,6 +15,7 @@ ul,h1{
 h1{
     font-family: Yeseva One;
     text-transform: uppercase;
+    font-size: 27px;
 }
 
 li{
