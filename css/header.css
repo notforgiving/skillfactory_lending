@@ -1,0 +1,45 @@
+.header{
+    width: 100%;
+    background-color: #131313;
+    height: 83px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 92px;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 15px;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+}
+
+nav>ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav>ul li:first-child{
+    margin-right: 95px;
+}
+
+nav>ul li:nth-child(7){
+    margin-right: 67px;
+}
+
+nav>ul li:nth-child(8){
+    margin-right: 45px;
+}
+
+nav>ul li:nth-child(-n+2) a,
+nav>ul li:nth-child(8) a{
+    color:#E3B873;
+}
+
+nav>ul li:nth-child(8) a{
+    text-decoration: underline;
+}
+

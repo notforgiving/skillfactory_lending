@@ -1,0 +1,31 @@
+.main-section{
+    height: 707px;
+    background: url(../img/main_bg.png);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 134px;
+}
+
+.main-section h1{
+    font-size: 40px;
+    line-height: 53px;
+    font-weight: s;
+}
+
+.main-section h1 span{
+    color: #E3B873;
+}
+
+.main-section p{
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.main{
+    padding: 20px 42px;
+    margin: 21px 20px 0 0;
+}
