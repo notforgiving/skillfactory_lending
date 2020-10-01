@@ -3,114 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalaze.css">
+    <!-- Стили слайдера -->
+    <link rel="stylesheet" href="plaguins/slick.css">
+    <link rel="stylesheet" href="plaguins/slick-theme.css">
+    <!-- Наши стили -->
     <link rel="stylesheet" href="css/basic.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/online_control.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>IC "Repair Design Project"</title>
 </head>
 <body>
     <header class="header">
-        <nav>
-            <ul>
-                <li><a href="#">"Repair Design Project"</a></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">MEASUREMENT</a></li>
-                <li><a href="#">TEAM</a></li>
-                <li><a href="#">REVIEWS</a></li>
-                <li><a href="#">CONTACTS</a></li>
-                <li><a href="tel:+79287683239">+7 (928) 768-32-39</a></li>
-                <li><button class="btn">Request a call</button></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                IC "Repair Design Project"
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                    <li><a href="#">MEASUREMENT</a></li>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">REVIEWS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+            </nav>
+            <div class="phone">
+                <a href="tel:+79287683239">
+                    +7 (928) 768-32-39
+                </a>
+            </div>
+            <div class="button-block">
+                <button class="header-btn btn">
+                    Request a call
+                </button>
+            </div>
+        </div>
     </header>
-    
-    <section class="main-section">
-        <h1>
-            Turnkey Repair in the<br>
-            city of <span>Rostov-on-Don</span>
-        </h1>
-        <p>
-            Get ready-made turnkey repairs on time<br>
-            with work time saving up to 45 days and 20% from<br>
-            cost of materials due to the organization of work
-        </p>
-        <div class="main-buttons-block">
-            <button class="btn main">
-                CALCULATE THE COST
-            </button>
-            <button class="btn btn-light">
-                SUBMIT YOUR APPLICATION
-            </button>
-        </div>
-    </section>
 
-    <section class="slider">
-        <div class="slider-description">
-            <h1>Completed<br>projects</h1>
-            <p>
-                Only a small part of the work performed by our company is presented<br>
-                on the site. For 14 years on in the constructionbr<br>
-                market we have made happy more than 1000 families</p>
-            <div class="slider-more-detailes">
-                <div class="detailes-item">
-                    <h2>City:</h2>
-                    <p>
-                        Rostov-on-Don<br>
-                        LCD admiral</p>
-                </div>
-                <div class="detailes-item">
-                    <h2>Apartment area:</h2>
-                    <p>81 m2</p>
-                </div>
-                <div class="detailes-item">
-                    <h2>Repair time:</h2>
-                    <p>3.5 months</p>
-                </div>
-                <div class="detailes-item">
-                    <h2>Repair Cost:</h2>
-                    <p>Upon request</p>
-                </div>
-            </div>
-            <div class="slider-navigation">
-                <button class="arrow_left"></button>
-                <button class="dots"></button>
-                <button class="dots"></button>
-                <button class="dots"></button>
-                <button class="arrow_right"></button>
-            </div>
-        </div>
-        <div class="slider-place">
-            <div class="slider-plase-cities">
-                <a href="#">Rostov-on-Don, Admiral</a> 
-                <a href="#">Sochi Thieves</a>
-                <a href="#">Rostov-on-Don Patriotic</a>
-            </div>
-            <div class="slider-foto">
-                <img src="img/image 2.1.png" alt="Фотография проекта">
+    <section class="repair-wrapper">
+        <div class="container">
+            <div class="repair-block">
+                <h1 class="repair-title">
+                    Turnkey Repair in the 
+                    city of <span>Rostov-on-Don</span>
+                </h1>
+                <p>
+                    Get ready-made turnkey repairs on time
+                    with work time saving up to 45 days and 
+                    20% from cost of materials due to the organization of work
+                </p>
+                <button class="btn">
+                    CALCULATE THE COST
+                </button>
+                <button class="repair-btn btn">
+                    APPLICATION
+                </button>
             </div>
         </div>
     </section>
 
-    <section class="online-control">
-        <h2>online control</h2>
-        <div class="camera">
-            <img src="img/camera.svg" alt="Камера">
+    <section class="conpleted">
+        <div class="container">
+            <div class="conpleted-wrapper">
+                <h2 class="conpleted-title">
+                    Completed 
+                    projects
+                </h2>
+                <p>
+                    Only a small part of the work performed by our company 
+                    is presented on the site. For 14 years on in the construction 
+                    market we have made happy more than 1000 families
+                </p>
+                <div class="copleted-slider">
+                    <div>
+                        <div class="copleted-slider-item">
+                            <img src="img/prepair-completed-1.png" alt="Фотография ремонта">
+                            <div class="completed-data">
+                                <div class="colplated-data-item">
+                                    <h4>City:</h4>
+                                    <p>Rostov-on-Don
+                                    LCD admiral</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Apartment area:</h4>
+                                    <p>81 m2</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Repair time:</h4>
+                                    <p>3.5 months</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Repair Cost:</h4>
+                                    <p>Upon request</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="copleted-slider-item">
+                            <img src="img/prepair-completed-2.png" alt="Фотография ремонта">
+                            <div class="completed-data">
+                                <div class="colplated-data-item">
+                                    <h4>City:</h4>
+                                    <p>Rostov-on-Don
+                                    LCD admiral</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Apartment area:</h4>
+                                    <p>81 m2</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Repair time:</h4>
+                                    <p>3.5 months</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Repair Cost:</h4>
+                                    <p>Upon request</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="copleted-slider-item">
+                            <img src="img/prepair-completed-3.png" alt="Фотография ремонта">
+                            <div class="completed-data">
+                                <div class="colplated-data-item">
+                                    <h4>City:</h4>
+                                    <p>Rostov-on-Don
+                                        LCD admiral</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Apartment area:</h4>
+                                    <p>81 m2</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Repair time:</h4>
+                                    <p>3.5 months</p>
+                                </div>
+                                <div class="colplated-data-item">
+                                    <h4>Repair Cost:</h4>
+                                    <p>Upon request</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="online-control-video">
-            <img src="img/video.png" alt="Видео-контроль">
-        </div>
-        <div class="line"></div>
-        <p>
-            At each facility, a camera is installed that broadcasts the progress of work on the 
-            clock. At any time, you can go to our website and monitor the progress of work in 
-            your apartment. You can watch the live broadcast from one of our facilities!
-            Leave a request below and you will receive a link to the broadcast.
-        </p>
     </section>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="plaguins/slick.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
