@@ -42,6 +42,11 @@ button:focus{
     outline: none;
 }
 
+input,
+input:focus{
+    outline: none;
+}
+
 a{
     color: #fff;
     text-decoration: none;
