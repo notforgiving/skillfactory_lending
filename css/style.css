@@ -12,6 +12,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .logo{
@@ -259,6 +261,11 @@
     width: 100%;
 }
 
+.online-form-item {
+    display: flex;
+    flex-direction: column;
+}
+
 .online-label-for-input{
     font-size: 13px;
     line-height: 21px;
@@ -336,7 +343,7 @@
 }
 
 
-@media (min-width: 1440px)
+@media (min-width: 1145px)
 {
     .header{
         height: 83px;
@@ -599,6 +606,7 @@
     }
 
     .online-form-input{
+        color: rgba(54, 54, 54, 0.5);
         border-bottom: 1px solid rgba(54, 54, 54, 0.5);
     }
 
@@ -621,5 +629,14 @@
     .form-btn{
         padding: 20px 75px;
         transform: translateY(0);
+    }
+}
+
+@media (min-width: 1920px)
+{
+    .repair-wrapper{
+        background: url(../img/repair_big_bg.png) no-repeat;
+        background-size: cover;
+        transition: 0.2s;
     }
 }
