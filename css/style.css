@@ -66,7 +66,7 @@
 }
 
 /*Секция со слайдером про завершенный ремонт*/
-.completed-block{
+.container{
     display: block;
 }
 
@@ -82,7 +82,7 @@
     margin-bottom: 22px;
 }
 
-.conpleted-text{
+.conpleted-wrapper>p{
     font-size: 11px;
     line-height: 158.48%;
     text-align: center;
@@ -109,13 +109,18 @@
     margin-bottom: 27px;
 }
 
-.colplated-data-item h4{
+.colplated-data-item>h4{
     font-family: 'Yeseva One Regular'; 
     font-size: 14px;
     line-height: 138.6%;
     text-transform: uppercase;
     color: #E3B873;
     margin-bottom: 11px;
+}
+
+.colplated-data-item>p{
+    font-size: 11px;
+    line-height: 135.84%;
 }
 
 .slick-prev{
@@ -160,42 +165,6 @@
     margin: auto;
     width: 15px;
     height: 15px;
-}
-
-/*Тест гридов*/
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-        "conpleted-title"
-        "conpleted-text"
-        "copleted-slider";
-}
-.conpleted-title {
-    grid-area: conpleted-title;
-}
-.conpleted-text {
-    grid-area: conpleted-text;
-}
-.copleted-slider {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "copleted-slider-item";
-    grid-area: copleted-slider;
-}
-.copleted-slider-item {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas: "slider-item-img";
-    grid-area: copleted-slider-item;
-}
-.slider-item-img {
-    grid-area: slider-item-img;
 }
 
 @media (min-width: 1440px)
@@ -266,44 +235,6 @@
         margin-left: 20px;
     }
 
-    /*Test секции со слайдером*/
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            "wrapper-title"
-            "slider-item-img";
-    }
-
-    .wrapper-title{
-        grid-area: wrapper-title;
-    }
-
-    .slider-item-img {
-        grid-area: slider-item-img;
-    }
-
-    .wrapper-title {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "conpleted-title"
-        "conpleted-text"
-        "colplated-data-item";
-        grid-area: wrapper-title;
-    }
-    .copleted-slider-item {
-        grid-area: copleted-slider-item;
-    }
-
-    .conpleted-title {
-        grid-area: conpleted-title;
-    }
-    .conpleted-text {
-        grid-area: conpleted-text;
-    }
+    /*Серкция со слайдером*/
 
 }
