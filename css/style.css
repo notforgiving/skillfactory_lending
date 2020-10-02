@@ -46,6 +46,10 @@
     color: #E3B873;
 }
 
+.repair-block{
+    width: 100%;
+}
+
 .repair-block p{
     font-size: 14px;
     line-height: 135.84%;   
@@ -82,7 +86,7 @@
     margin-bottom: 22px;
 }
 
-.conpleted-wrapper>p{
+.completed-slider-title>p{
     font-size: 11px;
     line-height: 158.48%;
     text-align: center;
@@ -133,7 +137,7 @@
     height: 36px;
     border-radius: 50%;
     position: absolute;
-    top: calc((339px / 2) - 60px);
+    top: calc(60% - 80px);
     left: 14px;
     z-index: 2;
 }
@@ -155,7 +159,7 @@
     height: 36px;
     border-radius: 50%;
     position: absolute;
-    top: calc((339px / 2) - 60px);
+    top: calc(60% - 80px);
     right: 14px;
     z-index: 2;
 }
@@ -165,6 +169,10 @@
     margin: auto;
     width: 15px;
     height: 15px;
+}
+
+.slider-cities{
+    display: none;
 }
 
 @media (min-width: 1440px)
@@ -201,8 +209,13 @@
     }
 
     /*Секция про ремонт. Первая секция*/
+    .repair-wrapper .container{
+        padding: 0 134px;
+    }
+    
     .repair-wrapper{
         height: 707px;
+        margin-bottom: 107px;
     }
 
     .repair-title{
@@ -236,5 +249,130 @@
     }
 
     /*Серкция со слайдером*/
+    .conpleted {
+        margin-bottom: 92px;
+    }
 
+    .conpleted-block .container{
+        padding: 0 134px;
+    }
+
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: 40% 56%;
+        grid-template-rows: 68px 241px 241px;
+        gap: 0px 50px;
+        grid-template-areas:
+            ". slider-cities"
+            "completed-slider-title copleted-slider-item"
+            "completed-data copleted-slider-item";
+    }
+    .copleted-slider-item {
+        grid-area: copleted-slider-item;
+    }
+    .completed-slider-title {
+        grid-area: completed-slider-title;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .completed-data {
+        grid-area: completed-data;
+        height: 162px;
+    }
+
+    .completed-slider-title p{
+        text-align: inherit;
+        font-size: 14px;
+        line-height: 27px;
+    }
+
+    .completed-slider-title h2{
+        font-size: 27px;
+        line-height: 37px;
+        letter-spacing: -0.07em;
+        margin-bottom: 34px;
+        width: 253px;
+        text-align: inherit;
+        height: 66px;
+        margin-top: 0;
+    }
+    
+    .colplated-data-item h4{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .colplated-data-item p{
+        font-size: 13px;
+        line-height: 21px;  
+    }
+
+    .arrow_prev{
+        display: none !important;
+    }
+
+    .arrow_next{
+        display: none !important;
+    }
+
+    .slider-cities{
+        grid-area: slider-cities;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .slider-cities-active{
+        color: #E3B873;
+        position: relative;
+    }
+
+    .slider-cities-active::before{
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        color: #E3B873;
+        background-color: #E3B873;
+    }
+
+    .slick-dots{
+        bottom: -15px;
+        width: auto;
+        left: 40px;
+    }
+
+    .slick-dots li{
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .slick-dots .slick-active{
+        background: #FFFFFF;
+        border-radius: 30px;
+    }
+
+    .slick-prev{
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+    .slick-next {
+        position: absolute;
+        right: calc(100% - 130px);
+        top: 100%;
+    }
+
+    .slick-prev:before, .slick-next:before{
+        font-size: 29px;
+    }
 }
