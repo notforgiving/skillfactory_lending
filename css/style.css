@@ -338,10 +338,101 @@
 }
 
 .type-of-repair{
-    height: 200px;
     background-color: #fff;
 }
 
+.repait-wrap{
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    padding-top: calc(33px + 58px);
+}
+
+.type-of-repair-title{
+    font-family: 'Yeseva One Regular';
+    font-size: 22px;
+    line-height: 138.6%;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.type-of-repair-img{
+    width: 27px;
+    height: 28px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.type-of-repair-img::before,
+.type-of-repair-img::after{
+    content: ' ';
+    position: absolute;
+    width: 32px;
+    height: 1.5px;
+    background-color: #E3B873;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.type-of-repair-img::before{
+    left: -150%;
+}
+
+.type-of-repair-img::after{
+    right: -150%;
+}
+
+.repair-item{
+    position: relative;
+    margin-bottom: 178px;
+}
+
+.repair-item-img {
+    width: 100%;
+}
+
+.repair-desc {
+    width: 60%;
+    padding: 21px 47px 37px 31px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+    bottom: -10%;
+}
+
+.repair-subtitle {
+    font-size: 15px;
+    line-height: 138.6%;
+    color: #363636;
+    font-family: 'Yeseva One Regular';
+    margin-bottom: 10px;
+    margin-bottom: 37px;
+}
+
+.repair-advanturies{
+    font-size: 13px;
+    line-height: 169.8%;
+    color: #959595;
+    margin-left: 15px;
+}
+
+.repair-advanturies li{
+    list-style: armenian;
+    list-style: disc;
+}
+
+.repair-desc-btn.btn {
+    padding: 11px 19px;
+    font-size: 15px;
+    line-height: 138.6%;
+    font-family: 'Yeseva One Regular';
+    width: auto;
+    position: absolute;
+    bottom: -8%;
+    left: 0;
+}
 
 @media (min-width: 1145px)
 {
@@ -435,15 +526,18 @@
             "completed-slider-title copleted-slider-item"
             "completed-data copleted-slider-item";
     }
+
     .copleted-slider-item {
         grid-area: copleted-slider-item;
     }
+
     .completed-slider-title {
         grid-area: completed-slider-title;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
+
     .completed-data {
         grid-area: completed-data;
         height: 162px;
@@ -629,6 +723,48 @@
     .form-btn{
         padding: 20px 75px;
         transform: translateY(0);
+    }
+
+    .repait-wrap{
+        padding-bottom: 258px;
+    }
+    
+    .type-of-repair-wrapper {
+        display: flex;
+    }
+
+    .type-of-repair-title{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .repair-item{
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    .repair-subtitle{
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 13px;
+    }
+
+    .repair-advanturies{
+        line-height: 27px;
+    }
+
+    .repair-desc{
+        width: fit-content;
+        padding: 25px 68px 49px 34px;
+        right: 0;
+        margin: auto;
+        bottom: -50%;
+    }
+
+    .repair-desc-btn.btn{
+        padding: 17px 16px;
+        font-size: 18px;
+        line-height: 25px;
     }
 }
 
