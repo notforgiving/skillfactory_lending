@@ -1,6 +1,6 @@
 /*Секция хедера*/
 .header{
-    background-color: #000;
+    background-color: #131313;
     font-family: 'Nunito Sans Regular';
     font-size: 11px;
     line-height: 15px;
@@ -72,6 +72,7 @@
 }
 
 /*Секция со слайдером про завершенный ремонт*/
+
 .conpleted-block{
     display: block;
 }
@@ -139,7 +140,10 @@
     height: 36px;
     border-radius: 50%;
     position: absolute;
-    top: calc(60% - 80px);
+    /* top: calc(60% - 80px); */
+    top: 0;
+    margin: auto;
+    bottom: 0;
     left: 14px;
     z-index: 2;
 }
@@ -161,7 +165,10 @@
     height: 36px;
     border-radius: 50%;
     position: absolute;
-    top: calc(60% - 80px);
+    /* top: calc(60% - 80px); */
+    top: 0;
+    margin: auto;
+    bottom: 0;
     right: 14px;
     z-index: 2;
 }
@@ -346,6 +353,7 @@
     justify-content: center;
     color: #000;
     padding-top: calc(33px + 58px);
+    padding-bottom: 60px;
 }
 
 .type-of-repair-title{
@@ -386,6 +394,10 @@
 .repair-item{
     position: relative;
     margin-bottom: 178px;
+}
+
+.repair-item:last-child{
+    margin-bottom: 0;
 }
 
 .repair-item-img {
@@ -434,10 +446,142 @@
     left: 0;
 }
 
-@media (min-width: 1145px)
+.wildest-fantasies{
+    padding-top: 52px;
+    background: linear-gradient(to bottom, #ffffff 70%, #131313 70%);
+}
+
+.wildest-inner.container {
+   display: block;
+}
+
+.wildest-slider{
+    margin-bottom: 52px;
+}
+
+.wildest-title {
+    font-size: 22px;
+    font-family: 'Yeseva One Regular';
+    line-height: 138.6%;
+    text-transform: uppercase;
+    color: #E3B873;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.wildest-item {
+    height: 242px;
+    overflow: hidden;
+}
+
+.wildest-item-img{
+    width: 100%;
+}
+
+.any-question {
+    margin-bottom: 52px;
+}
+
+.any-question-wrapper{
+    display: block;
+}
+
+.any-question-title {
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 52px;
+    font-family: 'Yeseva One Regular';
+}
+
+.any-question-input {
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 138.72%;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+}
+
+.any-question-input::placeholder{
+    color: #FFFFFF;
+}
+
+.any-question-check{
+    margin-bottom: 0;
+}
+
+.any-question-btn{
+    transform: translateY(0);
+    margin-top: 57px;
+    padding: 18px 144px;
+}
+
+.contacts{
+    flex-direction: column;
+    padding-bottom: 35px;
+}
+
+.contacts-map {
+    width: 100%;
+    height: 200px;
+    filter: grayscale(1);
+}
+
+.contacts-title {
+    font-size: 18px;
+    line-height: 138.6%;
+    text-align: center;
+    margin-top: 40px;
+    text-transform: uppercase;
+    color: #E3B873;
+    font-family: 'Yeseva One Regular';
+    margin-bottom: 23px;
+}
+
+.contacts-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 49px;
+}
+
+.contacts-link {
+    background-color: #e3b873;
+    width: 39px;
+    height: 39px;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.contacts-link:first-child{
+    margin-right: 21px;
+}
+
+.contacts-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.clients{
+    display: none;
+}
+
+.footer{
+    display: none;
+}
+
+ @media (min-width: 1145px)
 {
     .header{
-        height: 83px;
+        padding: 24px 0;
     }
     
     .phone{
@@ -474,7 +618,7 @@
     
     .repair-wrapper{
         height: 707px;
-        margin-bottom: 107px;
+        /* margin-bottom: 107px; */
     }
 
     .repair-title{
@@ -509,7 +653,10 @@
 
     /*Серкция со слайдером*/
     .conpleted {
-        margin-bottom: 92px;
+        padding-top: 107px;
+        background-color: #131313;
+        /* margin-bottom: 92px; */
+        padding-bottom: 92px;
     }
 
     .conpleted-block .container{
@@ -699,7 +846,8 @@
        
     }
 
-    .online-form-input{
+    .online-form-input,
+    .any-question-input{
         color: rgba(54, 54, 54, 0.5);
         border-bottom: 1px solid rgba(54, 54, 54, 0.5);
     }
@@ -708,7 +856,8 @@
         margin-bottom: 39px;
     }
 
-    .online-form-input::placeholder{
+    .online-form-input::placeholder,
+    .any-question-input::placeholder{
         font-size: 14px;
         line-height: 23px;
         color: #363636;
@@ -766,6 +915,221 @@
         font-size: 18px;
         line-height: 25px;
     }
+
+    .wildest-fantasies{
+        display: none;
+    }
+
+    /*Секция с отзывами*/
+    .clients{
+        display: block;
+    }
+
+    .clients-title {
+        font-size: 20px;
+        margin-bottom: 13px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #181818;
+        font-family: 'Yeseva One Regular';
+    }
+
+    .clients-img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 27px;
+    }
+
+    .clients-img-wrapper::before,
+    .clients-img-wrapper::after{
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 1.5px;
+        background-color: #E3B873;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .clients-img-wrapper::before{
+        left: 45%;
+    }
+
+    .clients-img-wrapper::after{
+        right: 45%;
+    }
+
+    .client-desc{
+        font-size: 18px;
+        line-height: 29px;
+        text-align: center;
+        color: #363636;
+        margin-bottom: 39px;
+    }
+
+    .clients-items {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .client-item {
+        width: 25%;
+        background: #FFFFFF;
+        padding: 24px 32px 0 20px;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    }
+
+    .client-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 23px;
+    }
+
+    .client-img {
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .client-name {
+        font-size: 18px;
+        display: inline-block;
+        line-height: 23px;
+        color: #181818;
+        font-family: 'Yeseva One Regular';
+    }
+
+    .client-item p{
+        font-size: 13px;
+        line-height: 180%;
+        color: #959595;
+        margin-bottom: 44px;
+    }
+
+    .client-data {
+        background-color: #e3b873;
+        display: flex;
+        justify-content: space-around;
+        width: 293px;
+        height: 54px;
+        box-sizing: border-box;
+        transform: translateY(50%);
+        box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+        padding: 0 12px 0 17px;
+        font-size: 17px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-family: 'Yeseva One Regular';
+    }
+
+    .data-area,
+    .data-days {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 13px;
+        height: 100%;
+    }
+
+    .data-area{
+        border-right: 1px solid #fff;
+    }
+
+    .data-days{
+        padding-left: 13px;
+    }
+
+    .data-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 15px;
+    }
+
+
+
+    /*Форма остались еще вопросы?*/
+    .any-question{
+        margin: -100px 0 0 0;
+        transform: translateY(50%);
+    }
+
+    .any-question-wrapper{
+        background: #181818;
+        margin: 0 288px;
+        padding: 34px 181px;
+    }
+
+    .any-question-form{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .any-question-desktop.online-control-mobil{
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .any-question-item.online-form-item{
+        margin: 0;
+        width: 48%;
+    }
+    
+    .online-form-item:nth-child(3){
+        width: 100%;
+    }
+
+    .any-question-label.online-label-for-input {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .any-question-label.online-form-input::placeholder{
+        color: #FFFFFF;
+    }
+
+    .any-question-input::placeholder{
+        color: #FFFFFF;
+    }
+
+    .any-question-check.online-label-checkbox {
+        color: #fff;
+        position: relative;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    /*Секция с контактами и картой*/
+    .contact{
+        background-color: black;
+    }
+
+    .contacts {
+        padding-top: 274px;
+        flex-direction: column-reverse;
+        background-image: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%), url(../img/bg-form.png);
+        background-blend-mode: overlay;
+        background-size: cover;
+    }
+
+    .contacts-title{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .contacts-map {
+        width: 70%;
+        height: 500px;
+    }
+
+    .footer{
+        display: block;
+        padding: 48px 0;
+    }
 }
 
 @media (min-width: 1920px)
@@ -775,4 +1139,4 @@
         background-size: cover;
         transition: 0.2s;
     }
-}
+} 

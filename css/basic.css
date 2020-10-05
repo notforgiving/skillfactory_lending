@@ -37,6 +37,10 @@ ul,li{
     list-style: none;
 }
 
+section{
+    border: none;
+}
+
 button,
 button:focus{
     border: none;
@@ -79,6 +83,10 @@ body{
 }
 
 @media (min-width:1440px){
+    body{
+        background-color: #fff;
+    }
+
     .container{
         padding: 0 92px;
     }

@@ -18,9 +18,12 @@ $(document).ready(function(){
                 nextArrow: '<button type="button" class="arrow_next"><img src="../img/arrow_right.svg"></button>'
               }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
           ]
+    });
+
+    $('.wildest-slider').slick({
+      dots: false,
+      prevArrow: '<button type="button" class="arrow_prev"><img src="../img/arrow_left.svg"></button>',
+      nextArrow: '<button type="button" class="arrow_next"><img src="../img/arrow_right.svg"></button>'
     });
   });
