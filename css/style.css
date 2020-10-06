@@ -346,6 +346,7 @@
 
 .type-of-repair{
     background-color: #fff;
+    margin-bottom: 230px;
 }
 
 .repait-wrap{
@@ -578,6 +579,14 @@
     display: none;
 }
 
+.measurer{
+    display: none;
+}
+
+.realize{
+    display: none;
+}
+
  @media (min-width: 1145px)
 {
     .header{
@@ -785,6 +794,10 @@
         font-size: 29px;
     }
 
+    .slick-slide:focus{
+        outline: none;
+    }
+
     .online-control .container{
         padding: 0 312px;
     }
@@ -818,7 +831,7 @@
     .online-control-form{
         flex-direction: row;
         width: 100%;
-        justify-content: center;
+        /* justify-content: center; */
     }
 
     .online-control-mobil {
@@ -826,6 +839,7 @@
         flex-wrap: wrap;
         justify-content: flex-end;
         margin-right: 49px;
+        width: 55%;
     }
 
     .online-form-item{
@@ -842,13 +856,13 @@
         font-size: 13px;
         width: 231px;
         line-height: 21px;
-        color: rgba(54, 54, 54, 0.5); 
+        /* color: rgba(54, 54, 54, 0.5);  */
        
     }
 
     .online-form-input,
     .any-question-input{
-        color: rgba(54, 54, 54, 0.5);
+        /* color: rgba(54, 54, 54, 0.5); */
         border-bottom: 1px solid rgba(54, 54, 54, 0.5);
     }
 
@@ -920,9 +934,219 @@
         display: none;
     }
 
+    /*Секция- выезд бесплатный замерщика*/
+    .measurer {
+        display: block;
+        background: url(../img/measurer.png) no-repeat left;
+        background-position-y: -100px;
+        margin-bottom: 220px;
+    }
+
+    .measurer_container.container {
+        color: #363636;
+        flex-wrap: wrap;
+    }
+
+    .measurer__point {
+        width: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding-left: 15%;
+    }
+    .measurer__item {
+        margin-bottom: 102px;
+        display: flex;
+        align-items: center;
+    }
+
+    .measurer__item:last-child{
+        margin: 0;
+    }
+
+    .measurer__cicle {
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        font-family: 'Yeseva One Regular';
+        background-color: #e3b873;
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        border: 8px solid #fff;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 18px;
+    }
+
+    .measurer__text {
+        display: inline-block;
+        width: 65%;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .measurer__form-block {
+        display: inline-block;
+        width: 42%;
+        background-color: rgb(19, 19, 19);
+        padding: 28px 49px;
+        box-sizing: border-box;
+        margin-right: 6%;
+    }
+    .measurer_title {
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 39px;
+    }
+
+    .measurer__form.online-control-form{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .measurer__wrapper.online-control-mobil{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right: 0;
+    }
+
+    .measurer__item.online-form-item{
+        width: 100%;
+        display: contents;
+        margin: 0;
+    }
+
+    .measurer__input{
+        font-size: 14px;
+        line-height: 138.72%;
+        background-color: transparent;
+        border: none;
+        padding-bottom: 8px;
+        margin-bottom: 19px;
+        border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+    }
+
+    .measurer__check-label.online-label-checkbox{
+        color: #fff;
+    }
+
+    .measurer__input-label.online-label-for-input {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .measurer__input::placeholder{
+        color: #fff;
+    }
+    
+    .measurer__btn.form-btn.btn{
+        padding: 18px 21px;
+        position: relative;
+        left: 50%;
+    }
+
+    .measurer_add.container{
+        justify-content: flex-end;
+    }
+
+    .measurer__discont {
+        display: flex;
+        margin-top: 38px;
+        width: 42%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 6%;
+    }
+    .measurer__img {
+        background: url(../img/pig.svg) no-repeat center center;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        margin-right: 25px;
+        background-color: #E3B873;
+        box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2);
+    }
+    .discont__text {
+        font-size: 18px;
+        line-height: 26px;
+        color: #E3B873; 
+        text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+    }
+
+    /*Секция с типами ремонтов*/
+    .realize {
+        display: block;
+        background: url(../img/realize.png) no-repeat;
+        background-size: cover;
+        margin-bottom: 110px;
+    }
+
+    .type__title {
+        font-size: 27px;
+        line-height: 37px;
+        text-transform: uppercase;
+        color: #E3B873;
+        font-family: 'Yeseva One Regular';
+        margin-bottom: 47px;
+    }
+
+    .type__type {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .type__link {
+        margin-bottom: 23px;
+        width: fit-content;
+    }
+
+    .type__link-active{
+        color: #E3B873;
+        position: relative;
+    }
+
+    .type__link-active::after{
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: #e3b873;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+    }
+
+    .realize__photo {
+        display: flex;
+        width: 60%;
+    }
+
+    .photo__columns {
+        margin-right: 39px;
+        transform: scale(1.2);
+    }
+
+    .photo__columns:first-child{
+            margin-right: 15%;
+    }
+    .photo__columns:last-child{
+        transform: scale(1.2) translateY(-80px);
+    } 
+
+    .photo_item {
+        margin-bottom: 39px;
+    }
+
     /*Секция с отзывами*/
     .clients{
         display: block;
+    }
+
+    .clients-wrapper.container{
+        flex-direction: column;
     }
 
     .clients-title {
@@ -1050,8 +1274,6 @@
         margin-right: 15px;
     }
 
-
-
     /*Форма остались еще вопросы?*/
     .any-question{
         margin: -100px 0 0 0;
@@ -1060,7 +1282,8 @@
 
     .any-question-wrapper{
         background: #181818;
-        margin: 0 288px;
+        /* margin: 0 288px; */
+        width: 30%;
         padding: 34px 181px;
     }
 

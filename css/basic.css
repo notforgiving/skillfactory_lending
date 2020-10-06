@@ -82,7 +82,7 @@ body{
     padding: 13px 33px;
 }
 
-@media (min-width:1440px){
+@media (min-width:1145px){
     body{
         background-color: #fff;
     }
