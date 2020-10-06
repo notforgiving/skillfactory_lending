@@ -32,6 +32,7 @@
 /*Секция про ремонт. Первая секция*/
 .repair-wrapper{
     height: 476px;
+    background-color: #000;
     background: url(../img/repair_bg.png) no-repeat;
     background-size: cover;
 }
@@ -856,13 +857,12 @@
         font-size: 13px;
         width: 231px;
         line-height: 21px;
-        /* color: rgba(54, 54, 54, 0.5);  */
        
     }
 
     .online-form-input,
     .any-question-input{
-        /* color: rgba(54, 54, 54, 0.5); */
+        color: #000;
         border-bottom: 1px solid rgba(54, 54, 54, 0.5);
     }
 
@@ -1013,6 +1013,7 @@
         flex-direction: column;
         justify-content: flex-end;
         margin-right: 0;
+        width: 100%;
     }
 
     .measurer__item.online-form-item{
@@ -1026,6 +1027,7 @@
         line-height: 138.72%;
         background-color: transparent;
         border: none;
+        color: #fff;
         padding-bottom: 8px;
         margin-bottom: 19px;
         border-bottom: 1px solid rgba(54, 54, 54, 0.5);
@@ -1046,7 +1048,7 @@
     .measurer__btn.form-btn.btn{
         padding: 18px 21px;
         position: relative;
-        left: 50%;
+        left: 60%;
     }
 
     .measurer_add.container{
@@ -1306,6 +1308,10 @@
         width: 100%;
     }
 
+    .any-question-input{
+        color: #fff;
+    }
+
     .any-question-label.online-label-for-input {
         color: rgba(255, 255, 255, 0.5);
     }
@@ -1358,6 +1364,7 @@
 @media (min-width: 1920px)
 {
     .repair-wrapper{
+        background-color: #000;
         background: url(../img/repair_big_bg.png) no-repeat;
         background-size: cover;
         transition: 0.2s;
