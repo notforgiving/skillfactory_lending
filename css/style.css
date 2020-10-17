@@ -451,9 +451,10 @@
 }
 
 .wildest-item {
-    height: 340px;
+    width: 90%;
     overflow: hidden;
     position: relative;
+    margin: auto;
 }
 
 .wildest-item-img{
@@ -595,6 +596,10 @@
     .nav-menu ul{
         display: flex;
         justify-content: space-between;
+    }
+
+    .nav__menu-item:hover{
+        color: #E3B873;
     }
     
     .button-block{
@@ -813,7 +818,7 @@
     .online-control-form{
         flex-direction: row;
         width: 100%;
-        /* justify-content: center; */
+        justify-content: center;
     }
 
     .online-control-mobil {
@@ -827,11 +832,12 @@
     .online-form-item{
         display: flex;
         flex-direction: column;
-        width: 231px;
+        width: 50%;
+        box-sizing: border-box;
     }
 
     .online-form-item:nth-child(1){
-        margin-right: 58px;
+        padding: 0 35px 0 0;
     }
 
     .online-label-for-input{
@@ -1320,12 +1326,12 @@
     /*Секция с контактами и картой*/
     .contact{
         background-color: black;
+        background-image: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%), url(../img/bg-form.png);
     }
 
     .contacts {
         padding-top: 274px;
         flex-direction: column-reverse;
-        background-image: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%), url(../img/bg-form.png);
         background-blend-mode: overlay;
         background-size: cover;
     }
