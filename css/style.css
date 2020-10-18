@@ -1,1363 +1,1523 @@
 /*Секция хедера*/
-.header{
-    background-color: #131313;
-    font-family: 'Nunito Sans Regular';
-    font-size: 11px;
-    line-height: 15px;
-    height: 57px;
+.header {
+  background-color: #131313;
+  font-family: "Nunito Sans Regular";
+  font-size: 11px;
+  line-height: 15px;
+  height: 57px;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 1440px;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
-.logo{
-    color: #E3B873;
-    text-transform: uppercase;
+.logo {
+  color: #e3b873;
+  text-transform: uppercase;
 }
 
-.nav-menu{
-    display: none;
+.nav-menu {
+  display: none;
 }
 
-.button-block{
-    display: none;
+.button-block {
+  display: none;
 }
 
 /*Секция про ремонт. Первая секция*/
-.repair-wrapper{
-    height: 476px;
-    background-color: #000;
-    background: url(../img/repair_bg.png) no-repeat;
-    background-size: cover;
+.repair-wrapper {
+  height: 476px;
+  background-color: #000;
+  background: url(../img/repair_bg.png) no-repeat;
+  background-size: cover;
 }
 
-.repair-title{
-    font-family: 'Yeseva One Regular'; 
-    text-transform: uppercase;
-    font-size: 23px;
-    line-height: 132.83%;
-    margin-bottom: 16px;
+.repair-title {
+  font-family: "Yeseva One Regular";
+  text-transform: uppercase;
+  font-size: 23px;
+  line-height: 132.83%;
+  margin-bottom: 16px;
 }
 
-.repair-title span{
-    color: #E3B873;
+.repair-title span {
+  color: #e3b873;
 }
 
-.repair-block{
-    width: 100%;
+.repair-block {
+  width: 100%;
 }
 
-.repair-block p{
-    font-size: 14px;
-    line-height: 135.84%;   
-    height: 94px;
-    margin-bottom: 32px;
+.repair-block p {
+  font-size: 14px;
+  line-height: 135.84%;
+  height: 94px;
+  margin-bottom: 32px;
 }
 
-.btn{
-    width: 100%;
-    padding: 19px 70px;
+.btn {
+  width: 100%;
+  padding: 19px 70px;
 }
 
-.repair-btn{
-    background-color: transparent;
-    border: 1px solid #fff;
-    box-shadow: none;
-    margin-top: 26px;
+.repair-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  box-shadow: none;
+  margin-top: 26px;
 }
 
 /*Секция со слайдером про завершенный ремонт*/
 
-.conpleted-block{
-    display: block;
+.conpleted-block {
+  display: block;
 }
 
-.conpleted-title{
-    font-size: 22px;
-    font-family: 'Yeseva One Regular'; 
-    color: #E3B873;
-    line-height: 138.6%;
-    text-align: center;
-    letter-spacing: -0.07em;
-    text-transform: uppercase;
-    margin-top: 36px;
-    margin-bottom: 22px;
+.conpleted-title {
+  font-size: 22px;
+  font-family: "Yeseva One Regular";
+  color: #e3b873;
+  line-height: 138.6%;
+  text-align: center;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+  margin-top: 36px;
+  margin-bottom: 22px;
 }
 
-.completed-slider-title>p{
-    font-size: 11px;
-    line-height: 158.48%;
-    text-align: center;
-    color: #FFFFFF;
-    margin-bottom: 36px;
+.completed-slider-text {
+  font-size: 11px;
+  line-height: 158.48%;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 36px;
 }
 
-.copleted-slider-item{
-    position: relative;
-    margin-bottom: 37px;
+.copleted-slider-item {
+  position: relative;
+  margin-bottom: 37px;
+  overflow: hidden;
+  /*Стили для слайдера*/
 }
 
-.copleted-slider-item img{
-    width: 100%;
-    position: relative;
+.copleted-slider-item-img {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.copleted-slider-item-img.active {
+  display: block;
+  -webkit-animation: move 0.2s ease-in;
+  animation: move 0.2s ease-in;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes move {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .item__prew_arrow,
-.item__next_arrow{
-    content: "";
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    z-index: 2;
-    margin: auto;
-    bottom: 0;
-    background-size: 20%;
+.item__next_arrow {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  z-index: 2;
+  margin: auto;
+  bottom: 0;
+  background-size: 20%;
 }
 
-.item__prew_arrow{
-    background: url(../img/arrow_left.svg) center center no-repeat;
-    left: 14px;
-    background-color: #E3B873;
+.item__prew_arrow {
+  background: url(../img/arrow_left.svg) center center no-repeat;
+  left: 14px;
+  background-color: #e3b873;
 }
 
-.item__next_arrow{
-    background: url(../img/arrow_right.svg) center center no-repeat;
-    right: 14px;
-    background-color: #E3B873;
+.item__next_arrow {
+  background: url(../img/arrow_right.svg) center center no-repeat;
+  right: 14px;
+  background-color: #e3b873;
 }
 
 .completed-data {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.colplated-data-item{
-    width: 50%;
-    margin-bottom: 27px;
+.colplated-data-item {
+  width: 50%;
+  margin-bottom: 27px;
 }
 
-.colplated-data-item>h4{
-    font-family: 'Yeseva One Regular'; 
-    font-size: 14px;
-    line-height: 138.6%;
-    text-transform: uppercase;
-    color: #E3B873;
-    margin-bottom: 11px;
+.colplated-data-item > h4 {
+  font-family: "Yeseva One Regular";
+  font-size: 14px;
+  line-height: 138.6%;
+  text-transform: uppercase;
+  color: #e3b873;
+  margin-bottom: 11px;
 }
 
-.colplated-data-item>p{
-    font-size: 11px;
-    line-height: 135.84%;
+.colplated-data-item > p {
+  font-size: 11px;
+  line-height: 135.84%;
 }
 
-.slider-cities{
-    display: none;
+.slider-cities {
+  display: none;
 }
 
-.online-control .container{
-    flex-direction: column;
+.online-control .container {
+  flex-direction: column;
 }
 
-.online-control-title{
-    font-family: 'Yeseva One Regular';
-    font-size: 22px;
-    line-height: 138.6%;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+.online-control-title {
+  font-family: "Yeseva One Regular";
+  font-size: 22px;
+  line-height: 138.6%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
-.online-control-img{
-    position: relative;
-    margin-bottom: 40px;
+.online-control-img {
+  position: relative;
+  margin-bottom: 40px;
 }
 
-.online-control-img::before, .online-control-img::after{
-    content: " ";
-    position: absolute;
-    width: 32px;
-    height: 1.5px;
-    background-color: #E3B873;
-    top: 50%;
+.online-control-img::before,
+.online-control-img::after {
+  content: " ";
+  position: absolute;
+  width: 32px;
+  height: 1.5px;
+  background-color: #e3b873;
+  top: 50%;
 }
 
-.online-control-img::before{
-    left: -50px;
+.online-control-img::before {
+  left: -50px;
 }
 
-.online-control-img::after{
-    right: -50px;
+.online-control-img::after {
+  right: -50px;
 }
 
-.online-control-video{
-    position: relative;
-    margin-bottom: 51px;
+.online-control-video {
+  position: relative;
+  margin-bottom: 51px;
 }
 
-.online-control-video img{
-    width: 100%;
+.online-control-video img {
+  width: 100%;
 }
 
-.online-control-video::after{
-    content: " ";
-    position: absolute;
-    background: url(../img/Polygon.png) center center no-repeat rgb(227, 184, 115);
-    width: 37px;
-    height: 37px;
-    border-radius: 50%;
-    top: 0px;
-    cursor: pointer;
-    margin: auto;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    box-sizing: border-box;
-    background-size: 29%;
-    background-position-x: calc(50% + 1px);
+.online-control-video::after {
+  content: " ";
+  position: absolute;
+  background: url(../img/Polygon.png) center center no-repeat rgb(227, 184, 115);
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  top: 0px;
+  cursor: pointer;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  box-sizing: border-box;
+  background-size: 29%;
+  background-position-x: calc(50% + 1px);
 }
 
-.online-control-video::before{
-    content: " ";
-    position: absolute;
-    background-color: #E3B873;
-    width: 55px;
-    height: 1.5px;
-    bottom: -28px;
-    left: 0;
-    right: 0;
-    margin: auto;
+.online-control-video::before {
+  content: " ";
+  position: absolute;
+  background-color: #e3b873;
+  width: 55px;
+  height: 1.5px;
+  bottom: -28px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-.online-control-desc{
-    text-align: center;
-    font-size: 11px;
-    line-height: 169.8%;
-    margin-bottom: 61px;
+.online-control-desc {
+  text-align: center;
+  font-size: 11px;
+  line-height: 169.8%;
+  margin-bottom: 61px;
 }
 
-.online-control-form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.online-control-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .online-form-item {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.online-label-for-input{
-    font-size: 13px;
-    line-height: 21px;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 6px;
+.online-label-for-input {
+  font-size: 13px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 6px;
 }
 
-.online-form-input{
-    font-size: 14px;
-    line-height: 138.72%;
-    color: #FFFFFF;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 8px;
+.online-form-input {
+  font-size: 14px;
+  line-height: 138.72%;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 8px;
 }
 
-.online-form-input:nth-child(2){
-    margin-bottom: 63px;
+.online-form-input:nth-child(2) {
+  margin-bottom: 63px;
 }
 
-.online-form-input:nth-child(4){
-    margin-bottom: 26px;
+.online-form-input:nth-child(4) {
+  margin-bottom: 26px;
 }
 
-.online-form-input::placeholder{
-    color: #FFFFFF;
+.online-form-input::-webkit-input-placeholder {
+  color: #ffffff;
 }
 
-.online-form-checkbox{
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
+.online-form-input::-moz-placeholder {
+  color: #ffffff;
 }
 
-.online-form-checkbox+label{
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
+.online-form-input:-ms-input-placeholder {
+  color: #ffffff;
 }
 
-.online-form-checkbox+label::before{
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #E3B873;
-    border-radius: 1px;
-    margin-right: 8px;
+.online-form-input::-ms-input-placeholder {
+  color: #ffffff;
 }
 
-.online-form-checkbox:checked+label::before{
-    background: url(../img/yes.svg) center no-repeat;
-    background-color: #E3B873;
+.online-form-input::placeholder {
+  color: #ffffff;
 }
 
-.online-label-checkbox{
-    font-size: 14px;
-    line-height: 163.68%;
-    color: #FFFFFF;
-    margin-bottom: calc(62px - 25px);
+.online-form-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
-.form-btn{
-    font-family: 'Nunito Sans Regular';
-    font-size: 13px;
-    line-height: 27px;
-    padding: 20px 124px;
-    transform: translateY(50%);
+.online-form-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.type-of-repair{
-    background-color: #fff;
+.online-form-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e3b873;
+  border-radius: 1px;
+  margin-right: 8px;
 }
 
-.repait-wrap{
-    flex-direction: column;
-    justify-content: center;
-    color: #000;
-    padding-top: calc(33px + 58px);
-    padding-bottom: 60px;
+.online-form-checkbox:checked + label::before {
+  background: url(../img/yes.svg) center no-repeat;
+  background-color: #e3b873;
 }
 
-.type-of-repair-title{
-    font-family: 'Yeseva One Regular';
-    font-size: 22px;
-    line-height: 138.6%;
-    text-transform: uppercase;
-    margin-bottom: 17px;
+.online-label-checkbox {
+  font-size: 14px;
+  line-height: 163.68%;
+  color: #ffffff;
+  margin-bottom: calc(62px - 25px);
 }
 
-.type-of-repair-img{
-    width: 27px;
-    height: 28px;
-    margin-bottom: 40px;
-    position: relative;
+.form-btn {
+  font-family: "Nunito Sans Regular";
+  font-size: 13px;
+  line-height: 27px;
+  padding: 20px 124px;
+  transform: translateY(50%);
+}
+
+.type-of-repair {
+  background-color: #fff;
+}
+
+.repait-wrap {
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+  padding-top: calc(33px + 58px);
+  padding-bottom: 60px;
+}
+
+.type-of-repair-title {
+  font-family: "Yeseva One Regular";
+  font-size: 22px;
+  line-height: 138.6%;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.type-of-repair-img {
+  width: 27px;
+  height: 28px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 .type-of-repair-img::before,
-.type-of-repair-img::after{
-    content: ' ';
-    position: absolute;
-    width: 32px;
-    height: 1.5px;
-    background-color: #E3B873;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+.type-of-repair-img::after {
+  content: " ";
+  position: absolute;
+  width: 32px;
+  height: 1.5px;
+  background-color: #e3b873;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
-.type-of-repair-img::before{
-    left: -150%;
+.type-of-repair-img::before {
+  left: -150%;
 }
 
-.type-of-repair-img::after{
-    right: -150%;
+.type-of-repair-img::after {
+  right: -150%;
 }
 
-.repair-item{
-    position: relative;
-    margin-bottom: 178px;
+.repair-item {
+  position: relative;
+  margin-bottom: 178px;
 }
 
-.repair-item:last-child{
-    margin-bottom: 0;
+.repair-item:last-child {
+  margin-bottom: 0;
 }
 
 .repair-item-img {
-    width: 100%;
+  width: 100%;
 }
 
 .repair-desc {
-    width: 60%;
-    padding: 21px 47px 37px 31px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
-    bottom: -10%;
+  width: 60%;
+  padding: 21px 47px 37px 31px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+  bottom: -10%;
 }
 
 .repair-subtitle {
-    font-size: 15px;
-    line-height: 138.6%;
-    color: #363636;
-    font-family: 'Yeseva One Regular';
-    margin-bottom: 10px;
-    margin-bottom: 37px;
+  font-size: 15px;
+  line-height: 138.6%;
+  color: #363636;
+  font-family: "Yeseva One Regular";
+  margin-bottom: 10px;
+  margin-bottom: 37px;
 }
 
-.repair-advanturies{
-    font-size: 13px;
-    line-height: 169.8%;
-    color: #959595;
-    margin-left: 15px;
+.repair-advanturies {
+  font-size: 13px;
+  line-height: 169.8%;
+  color: #959595;
+  margin-left: 15px;
 }
 
-.repair-advanturies li{
-    list-style: armenian;
-    list-style: disc;
+.repair-advanturies li {
+  list-style: armenian;
+  list-style: disc;
 }
 
 .repair-desc-btn.btn {
-    padding: 11px 19px;
-    font-size: 15px;
-    line-height: 138.6%;
-    font-family: 'Yeseva One Regular';
-    width: auto;
-    position: absolute;
-    bottom: -8%;
-    left: 0;
+  padding: 11px 19px;
+  font-size: 15px;
+  line-height: 138.6%;
+  font-family: "Yeseva One Regular";
+  width: auto;
+  position: absolute;
+  bottom: -8%;
+  left: 0;
 }
 
-.wildest-fantasies{
-    padding-top: 52px;
-    background: linear-gradient(to bottom, #ffffff 70%, #131313 70%);
+.wildest-fantasies {
+  padding-top: 52px;
+  background: linear-gradient(to bottom, #ffffff 70%, #131313 70%);
 }
 
 .wildest-inner.container {
-   display: block;
+  display: block;
 }
 
-.wildest-slider{
-    margin-bottom: 52px;
+.wildest-slider {
+  margin-bottom: 52px;
 }
 
 .wildest-title {
-    font-size: 22px;
-    font-family: 'Yeseva One Regular';
-    line-height: 138.6%;
-    text-transform: uppercase;
-    color: #E3B873;
-    text-align: center;
-    margin-bottom: 24px;
+  font-size: 22px;
+  font-family: "Yeseva One Regular";
+  line-height: 138.6%;
+  text-transform: uppercase;
+  color: #e3b873;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .wildest-item {
-    width: 90%;
-    overflow: hidden;
-    position: relative;
-    margin: auto;
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
 }
 
-.wildest-item-img{
-    width: 100%;
+.wildest-item-img {
+  width: 100%;
 }
 
 .any-question {
-    margin-bottom: 52px;
+  margin-bottom: 52px;
 }
 
-.any-question-wrapper{
-    display: block;
+.any-question-wrapper {
+  display: block;
 }
 
 .any-question-title {
-    font-size: 20px;
-    line-height: 28px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 52px;
-    font-family: 'Yeseva One Regular';
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 52px;
+  font-family: "Yeseva One Regular";
 }
 
 .any-question-input {
-    margin-bottom: 32px;
-    font-size: 14px;
-    line-height: 138.72%;
-    color: #FFFFFF;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 8px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 138.72%;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 8px;
 }
 
-.any-question-input::placeholder{
-    color: #FFFFFF;
+.any-question-input::-webkit-input-placeholder {
+  color: #ffffff;
 }
 
-.any-question-check{
-    margin-bottom: 0;
+.any-question-input::-moz-placeholder {
+  color: #ffffff;
 }
 
-.any-question-btn{
-    transform: translateY(0);
-    margin-top: 57px;
-    padding: 18px 144px;
+.any-question-input:-ms-input-placeholder {
+  color: #ffffff;
 }
 
-.contacts{
-    flex-direction: column;
-    padding-bottom: 35px;
+.any-question-input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.any-question-input::placeholder {
+  color: #ffffff;
+}
+
+.any-question-check {
+  margin-bottom: 0;
+}
+
+.any-question-btn {
+  transform: translateY(0);
+  margin-top: 57px;
+  padding: 18px 144px;
+}
+
+.contacts {
+  flex-direction: column;
+  padding-bottom: 35px;
 }
 
 .contacts-map {
-    width: 100%;
-    height: 200px;
-    filter: grayscale(1);
+  width: 100%;
+  height: 200px;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .contacts-title {
-    font-size: 18px;
-    line-height: 138.6%;
-    text-align: center;
-    margin-top: 40px;
-    text-transform: uppercase;
-    color: #E3B873;
-    font-family: 'Yeseva One Regular';
-    margin-bottom: 23px;
+  font-size: 18px;
+  line-height: 138.6%;
+  text-align: center;
+  margin-top: 40px;
+  text-transform: uppercase;
+  color: #e3b873;
+  font-family: "Yeseva One Regular";
+  margin-bottom: 23px;
 }
 
 .contacts-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 49px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 49px;
 }
 
 .contacts-link {
-    background-color: #e3b873;
-    width: 39px;
-    height: 39px;
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
+  background-color: #e3b873;
+  width: 39px;
+  height: 39px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
 }
 
-.contacts-link:first-child{
-    margin-right: 21px;
+.contacts-link:first-child {
+  margin-right: 21px;
 }
 
 .contacts-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.clients {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
+.measurer {
+  display: none;
+}
+
+.realize {
+  display: none;
+}
+
+.buttons_block {
+  display: none;
+}
+
+@media (min-width: 1145px) {
+  .header {
+    padding: 24px 0;
+  }
+
+  .phone {
+    margin-right: -100px;
+  }
+
+  .phone a {
+    color: #e3b873;
+    text-decoration: underline;
+  }
+
+  .nav-menu {
+    display: block;
+    width: 38%;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav__menu-item:hover {
+    color: #e3b873;
+  }
+
+  .button-block {
+    display: block;
+  }
+
+  .header-btn {
+    color: #fff;
+  }
+
+  /*Секция про ремонт. Первая секция*/
+  .repair-wrapper .container {
+    padding: 0 134px;
+  }
+
+  .repair-wrapper {
+    height: 707px;
+    /* margin-bottom: 107px; */
+  }
+
+  .repair-title {
+    font-size: 40px;
+    line-height: 53px;
+    margin-bottom: 19px;
+  }
+
+  .repair-block {
+    width: 50%;
+  }
+
+  .repair-block p {
+    font-size: 22px;
+    line-height: 36px;
+    height: auto;
+    margin-bottom: 41px;
+  }
+
+  .btn {
+    width: 207px;
+    height: 51px;
+    padding: 19px 42px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .repair-btn {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  /*Серкция со слайдером*/
+  .conpleted {
+    padding-top: 107px;
+    background-color: #131313;
+    /* margin-bottom: 92px; */
+    padding-bottom: 92px;
+  }
+
+  .conpleted-block .container {
+    padding: 0 134px;
+  }
+
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 40% 56%;
+    grid-template-rows: 68px 241px 241px 20px;
+    gap: 0px 50px;
+    grid-template-areas:
+      ". slider-cities"
+      "completed-slider-title copleted-slider-item"
+      "completed-data copleted-slider-item"
+      "buttons_block copleted-slider-item";
+  }
+
+  .buttons_block {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    grid-area: buttons_block;
+    align-items: center;
+  }
+
+  .prev_arrow {
+    width: 50px;
+    height: 100%;
+    background: url(../img/prev.svg) center center no-repeat;
+    margin-right: 20px;
+  }
+
+  .dots__block{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0.5;
+  }
+
+  .dots {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+  }
+
+  .dots-active,.dots:hover {
+    background: #ffffff;
+  }
+
+  .next_arrow {
+    width: 50px;
+    height: 100%;
+    background: url(../img/next.svg) center center no-repeat;
+    margin-left: 20px;
+  }
+
+  .copleted-slider-item {
+    grid-area: copleted-slider-item;
+  }
+
+  .completed-slider-title {
+    grid-area: completed-slider-title;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .completed-data {
+    grid-area: completed-data;
+    height: 162px;
+  }
+
+  .completed-slider-text {
+    text-align: inherit;
+    font-size: 14px;
+    line-height: 27px;
+  }
+
+  .completed-slider-title h2 {
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    margin-bottom: 34px;
+    width: 253px;
+    text-align: inherit;
+    height: 66px;
+    margin-top: 0;
+  }
+
+  .colplated-data-item h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .colplated-data-item p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .slider-cities {
+    grid-area: slider-cities;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+
+    font-family: "Yeseva One Regular";
+  }
+
+  .slider-cities-name {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .active-cities {
+    color: #e3b873;
+    position: relative;
+  }
+
+  .active-cities::before {
+    content: "";
     position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    color: #e3b873;
+    background-color: #e3b873;
+  }
+
+  .item__prew_arrow {
+    display: none;
+  }
+
+  .item__next_arrow {
+    display: none;
+  }
+
+  .online-control .container {
+    padding: 0 312px;
+  }
+
+  .online-control {
+    background: linear-gradient(to bottom, #131313 35%, white 35%);
+    padding-top: 92px;
+  }
+
+  .online-control-video::after {
+    width: 85px;
+    height: 85px;
+  }
+
+  .online-control-video {
+    margin-bottom: 97px;
+    box-shadow: 0px 6px 20px 7px #0000001c;
+  }
+
+  .online-control-video::before {
+    bottom: -62px;
+  }
+
+  .online-control-desc {
+    color: #363636;
+    text-align: center;
+    font-size: 18px;
+    width: 683px;
+    line-height: 37px;
+  }
+
+  .online-control-form {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .online-control-mobil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right: 49px;
+    width: 55%;
+  }
+
+  .online-form-item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .online-form-item:nth-child(1) {
+    padding: 0 35px 0 0;
+  }
+
+  .online-label-for-input {
+    font-size: 13px;
+    width: 231px;
+    line-height: 21px;
+  }
+
+  .online-form-input,
+  .any-question-input {
+    color: #000;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+  }
+
+  .online-form-input:nth-child(2) {
+    margin-bottom: 39px;
+  }
+
+  .online-form-input::-webkit-input-placeholder,
+  .any-question-input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 23px;
+    color: #363636;
+  }
+
+  .online-form-input::-moz-placeholder,
+  .any-question-input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 23px;
+    color: #363636;
+  }
+
+  .online-form-input:-ms-input-placeholder,
+  .any-question-input:-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 23px;
+    color: #363636;
+  }
+
+  .online-form-input::-ms-input-placeholder,
+  .any-question-input::-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 23px;
+    color: #363636;
+  }
+
+  .online-form-input::placeholder,
+  .any-question-input::placeholder {
+    font-size: 14px;
+    line-height: 23px;
+    color: #363636;
+  }
+
+  .online-label-checkbox {
+    font-size: 14px;
+    line-height: 163.68%;
+    color: #181818;
+  }
+
+  .form-btn {
+    padding: 20px 75px;
+    transform: translateY(0);
+  }
+
+  .repait-wrap {
+    padding-bottom: 258px;
+  }
+
+  .type-of-repair {
+    margin-bottom: 230px;
+  }
+
+  .type-of-repair-wrapper {
+    display: flex;
+  }
+
+  .type-of-repair-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .repair-item {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .repair-subtitle {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 13px;
+  }
+
+  .repair-advanturies {
+    line-height: 27px;
+  }
+
+  .repair-desc {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 25px 68px 49px 34px;
+    right: 0;
+    margin: auto;
+    bottom: -50%;
+  }
+
+  .repair-desc-btn.btn {
+    padding: 17px 16px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .wildest-fantasies {
+    display: none;
+  }
+
+  /*Секция- выезд бесплатный замерщика*/
+  .measurer {
+    display: block;
+    background: url(../img/measurer.png) no-repeat left;
+    background-position-y: -100px;
+    margin-bottom: 220px;
+  }
+
+  .measurer_container.container {
+    color: #363636;
+    flex-wrap: wrap;
+  }
+
+  .measurer__point {
+    width: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: 15%;
+  }
+  .measurer__item {
+    margin-bottom: 102px;
+    display: flex;
+    align-items: center;
+  }
+
+  .measurer__item:last-child {
+    margin: 0;
+  }
+
+  .measurer__cicle {
+    font-size: 18px;
+    line-height: 25px;
+    color: #ffffff;
+    font-family: "Yeseva One Regular";
+    background-color: #e3b873;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+  }
+
+  .measurer__text {
+    display: inline-block;
+    width: 65%;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .measurer__form-block {
+    display: inline-block;
+    width: 42%;
+    background-color: rgb(19, 19, 19);
+    padding: 28px 49px;
+    box-sizing: border-box;
+    margin-right: 6%;
+  }
+  .measurer_title {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 39px;
+  }
+
+  .measurer__form.online-control-form {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .measurer__wrapper.online-control-mobil {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .measurer__item.online-form-item {
+    width: 100%;
+    display: contents;
+    margin: 0;
+  }
+
+  .measurer__input {
+    font-size: 14px;
+    line-height: 138.72%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding-bottom: 8px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+  }
+
+  .measurer__check-label.online-label-checkbox {
+    color: #fff;
+  }
+
+  .measurer__input-label.online-label-for-input {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .measurer__input::-webkit-input-placeholder {
+    color: #fff;
+  }
+
+  .measurer__input::-moz-placeholder {
+    color: #fff;
+  }
+
+  .measurer__input:-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .measurer__input::-ms-input-placeholder {
+    color: #fff;
+  }
+
+  .measurer__input::placeholder {
+    color: #fff;
+  }
+
+  .measurer__btn.form-btn.btn {
+    padding: 18px 21px;
+    position: relative;
+    left: 60%;
+  }
+
+  .measurer_add.container {
+    justify-content: flex-end;
+  }
+
+  .measurer__discont {
+    display: flex;
+    margin-top: 38px;
+    width: 42%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6%;
+  }
+  .measurer__img {
+    background: url(../img/pig.svg) no-repeat center center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin-right: 25px;
+    background-color: #e3b873;
+    box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2);
+  }
+  .discont__text {
+    font-size: 18px;
+    line-height: 26px;
+    color: #e3b873;
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+  }
+
+  /*Секция с типами ремонтов*/
+  .realize {
+    display: block;
+    background: url(../img/realize.png) no-repeat;
+    background-size: cover;
+    margin-bottom: 110px;
+  }
+
+  .type__title {
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #e3b873;
+    font-family: "Yeseva One Regular";
+    margin-bottom: 47px;
+  }
+
+  .type__type {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .type__link {
+    margin-bottom: 23px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .type__link:hover {
+    color: #e3b873;
+    position: relative;
+  }
+
+  .type__link:hover::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #e3b873;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+  }
+
+  .realize__photo {
+    display: flex;
+    width: 60%;
+  }
+
+  .photo__columns {
+    margin-right: 39px;
+    transform: scale(1.2);
+  }
+
+  .photo__columns:first-child {
+    margin-right: 15%;
+  }
+  .photo__columns:last-child {
+    transform: scale(1.2) translateY(-80px);
+  }
+
+  .photo_item {
+    margin-bottom: 39px;
+  }
+
+  /*Секция с отзывами*/
+  .clients {
+    display: block;
+  }
+
+  .clients-wrapper.container {
+    flex-direction: column;
+  }
+
+  .clients-title {
+    font-size: 20px;
+    margin-bottom: 13px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+    font-family: "Yeseva One Regular";
+  }
+
+  .clients-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 27px;
+  }
+
+  .clients-img-wrapper::before,
+  .clients-img-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 1.5px;
+    background-color: #e3b873;
     top: 0;
     bottom: 0;
+    margin: auto;
+  }
+
+  .clients-img-wrapper::before {
+    left: 150%;
+  }
+
+  .clients-img-wrapper::after {
+    right: 150%;
+  }
+
+  .client-desc {
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #363636;
+    margin-bottom: 39px;
+  }
+
+  .clients-items {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .client-item {
+    width: 25%;
+    background: #ffffff;
+    padding: 24px 32px 0 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  }
+
+  .client-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+  }
+
+  .client-img {
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .client-name {
+    font-size: 18px;
+    display: inline-block;
+    line-height: 23px;
+    color: #181818;
+    font-family: "Yeseva One Regular";
+  }
+
+  .client-item p {
+    font-size: 13px;
+    line-height: 180%;
+    color: #959595;
+    margin-bottom: 44px;
+  }
+
+  .client-data {
+    background-color: #e3b873;
+    display: flex;
+    justify-content: space-around;
+    width: 293px;
+    height: 54px;
+    box-sizing: border-box;
+    transform: translateY(50%);
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    padding: 0 12px 0 17px;
+    font-size: 17px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Yeseva One Regular";
+  }
+
+  .data-area,
+  .data-days {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 13px;
+    height: 100%;
+  }
+
+  .data-area {
+    border-right: 1px solid #fff;
+  }
+
+  .data-days {
+    padding-left: 13px;
+  }
+
+  .data-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+  }
+
+  /*Форма остались еще вопросы?*/
+  .any-question {
+    margin: -100px 0 0 0;
+    transform: translateY(50%);
+  }
+
+  .any-question-wrapper {
+    background: #181818;
+    /* margin: 0 288px; */
+    width: 30%;
+    padding: 34px 181px;
+  }
+
+  .any-question-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .any-question-desktop.online-control-mobil {
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .any-question-item.online-form-item {
+    margin: 0;
+    width: 48%;
+  }
+
+  .online-form-item:nth-child(3) {
+    width: 100%;
+  }
+
+  .any-question-input {
+    color: #fff;
+  }
+
+  .any-question-label.online-label-for-input {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .any-question-label.online-form-input::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-label.online-form-input::-moz-placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-label.online-form-input:-ms-input-placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-label.online-form-input::-ms-input-placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-label.online-form-input::placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-input::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-input::-moz-placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-input:-ms-input-placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-input::-ms-input-placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-input::placeholder {
+    color: #ffffff;
+  }
+
+  .any-question-check.online-label-checkbox {
+    color: #fff;
+    position: relative;
     right: 0;
     left: 0;
     margin: auto;
+  }
+
+  /*Секция с контактами и картой*/
+  .contact {
+    background-color: black;
+    background-image: linear-gradient(
+        180deg,
+        rgba(24, 24, 24, 0.9) 3.47%,
+        rgba(24, 24, 24, 0.72) 100%
+      ),
+      url(../img/bg-form.png);
+  }
+
+  .contacts {
+    padding-top: 274px;
+    flex-direction: column-reverse;
+    background-blend-mode: overlay;
+    background-size: cover;
+  }
+
+  .contacts-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .contacts-map {
+    width: 70%;
+    height: 500px;
+  }
+
+  .footer {
+    display: block;
+    padding: 48px 0;
+  }
 }
 
-.clients{
-    display: none;
+@media (min-width: 1920px) {
+  .repair-wrapper {
+    background-color: #000;
+    background: url(../img/repair_big_bg.png) no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+  }
 }
-
-.footer{
-    display: none;
-}
-
-.measurer{
-    display: none;
-}
-
-.realize{
-    display: none;
-}
-
-.buttons_block{
-    display: none;
-}
-
- @media (min-width: 1145px)
-{
-    .header{
-        padding: 24px 0;
-    }
-    
-    .phone{
-        margin-right: -100px;
-    }
-
-    .phone a{
-        color: #E3B873;
-        text-decoration: underline;
-    }
-
-    .nav-menu{
-        display: block;
-        width: 38%;
-    }
-
-    .nav-menu ul{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .nav__menu-item:hover{
-        color: #E3B873;
-    }
-    
-    .button-block{
-        display: block;
-    }
-
-    .header-btn{
-        color: #fff;
-    }
-
-    /*Секция про ремонт. Первая секция*/
-    .repair-wrapper .container{
-        padding: 0 134px;
-    }
-    
-    .repair-wrapper{
-        height: 707px;
-        /* margin-bottom: 107px; */
-    }
-
-    .repair-title{
-        font-size: 40px;
-        line-height: 53px;
-        margin-bottom: 19px;
-    }
-
-    .repair-block{
-        width: 50%;
-    }
-
-    .repair-block p{
-        font-size: 22px;
-        line-height: 36px;
-        height: auto;
-        margin-bottom: 41px;
-    }
-
-    .btn{
-        width: 207px;
-        height: 51px;
-        padding: 19px 42px;
-        font-size: 11px;
-        line-height: 15px;
-    }
-
-    .repair-btn{
-        margin-top: 0;
-        margin-left: 20px;
-    }
-
-    /*Серкция со слайдером*/
-    .conpleted {
-        padding-top: 107px;
-        background-color: #131313;
-        /* margin-bottom: 92px; */
-        padding-bottom: 92px;
-    }
-
-    .conpleted-block .container{
-        padding: 0 134px;
-    }
-
-    .grid-wrapper {
-        display: grid;
-        grid-template-columns: 40% 56%;
-        grid-template-rows: 68px 241px 241px 20px;
-        gap: 0px 50px;
-        grid-template-areas:
-            ". slider-cities"
-            "completed-slider-title copleted-slider-item"
-            "completed-data copleted-slider-item"
-            "buttons_block copleted-slider-item";
-    }
-
-    .buttons_block{
-        display: flex;
-        width: 50%;
-        justify-content: space-between;
-        grid-area: buttons_block;
-    }
-
-    .prev_arrow{
-        width: 50px;
-        height: 100%;
-        background: url(../img/prev.svg) center center no-repeat;
-        margin-right: 20px;
-    }
-    
-    .dots {
-        width: 10px;
-        height: 10px;
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-    }
-
-    .dots:hover{
-        background: #FFFFFF;
-    }
-
-    .next_arrow{
-        width: 50px;
-        height: 100%;
-        background: url(../img/next.svg) center center no-repeat;
-        margin-left: 20px;
-    }
-
-    .copleted-slider-item {
-        grid-area: copleted-slider-item;
-    }
-
-    .completed-slider-title {
-        grid-area: completed-slider-title;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .completed-data {
-        grid-area: completed-data;
-        height: 162px;
-    }
-
-    .completed-slider-title p{
-        text-align: inherit;
-        font-size: 14px;
-        line-height: 27px;
-    }
-
-    .completed-slider-title h2{
-        font-size: 27px;
-        line-height: 37px;
-        letter-spacing: -0.07em;
-        margin-bottom: 34px;
-        width: 253px;
-        text-align: inherit;
-        height: 66px;
-        margin-top: 0;
-    }
-    
-    .colplated-data-item h4{
-        font-size: 18px;
-        line-height: 25px;
-    }
-
-    .colplated-data-item p{
-        font-size: 13px;
-        line-height: 21px;  
-    }
-
-    .slider-cities{
-        grid-area: slider-cities;
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        line-height: 19px;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.3);
-        font-family: 'Yeseva One Regular';
-    }
-
-    .slider-cities-active{
-        color: #E3B873;
-        position: relative;
-    }
-
-    .slider-cities-active::before{
-        content: "";
-        position: absolute;
-        top: 25px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        color: #E3B873;
-        background-color: #E3B873;
-    }
-
-    .item__prew_arrow{
-        display: none;
-    }
-
-    .item__next_arrow{
-        display: none;
-    }
-
-    .online-control .container{
-        padding: 0 312px;
-    }
-
-    .online-control {
-        background: linear-gradient(to bottom, #131313 35%, white 35%);
-        padding-top: 92px;
-    }
-
-    .online-control-video::after{
-        width: 85px;
-        height: 85px;
-    }
-
-    .online-control-video {
-        margin-bottom: 97px;
-        box-shadow: 0px 6px 20px 7px #0000001c;
-    }
-
-    .online-control-video::before{
-        bottom: -62px;
-    }
-
-    .online-control-desc{
-        color: #363636;
-        text-align: center;
-        font-size: 18px;
-        width: 683px;
-        line-height: 37px;
-    }
-
-    .online-control-form{
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .online-control-mobil {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        margin-right: 49px;
-        width: 55%;
-    }
-
-    .online-form-item{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        box-sizing: border-box;
-    }
-
-    .online-form-item:nth-child(1){
-        padding: 0 35px 0 0;
-    }
-
-    .online-label-for-input{
-        font-size: 13px;
-        width: 231px;
-        line-height: 21px;
-       
-    }
-
-    .online-form-input,
-    .any-question-input{
-        color: #000;
-        border-bottom: 1px solid rgba(54, 54, 54, 0.5);
-    }
-
-    .online-form-input:nth-child(2){
-        margin-bottom: 39px;
-    }
-
-    .online-form-input::placeholder,
-    .any-question-input::placeholder{
-        font-size: 14px;
-        line-height: 23px;
-        color: #363636;
-    }
-
-    .online-label-checkbox{
-        font-size: 14px;
-        line-height: 163.68%;
-        color: #181818;
-    }
-
-    .form-btn{
-        padding: 20px 75px;
-        transform: translateY(0);
-    }
-
-    .repait-wrap{
-        padding-bottom: 258px;
-    }
-
-    .type-of-repair{
-        margin-bottom: 230px;
-    }
-    
-    .type-of-repair-wrapper {
-        display: flex;
-    }
-
-    .type-of-repair-title{
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .repair-item{
-        margin-right: 30px;
-        margin-bottom: 0;
-    }
-
-    .repair-subtitle{
-        font-size: 18px;
-        line-height: 25px;
-        margin-bottom: 13px;
-    }
-
-    .repair-advanturies{
-        line-height: 27px;
-    }
-
-    .repair-desc{
-        width: fit-content;
-        padding: 25px 68px 49px 34px;
-        right: 0;
-        margin: auto;
-        bottom: -50%;
-    }
-
-    .repair-desc-btn.btn{
-        padding: 17px 16px;
-        font-size: 18px;
-        line-height: 25px;
-    }
-
-    .wildest-fantasies{
-        display: none;
-    }
-
-    /*Секция- выезд бесплатный замерщика*/
-    .measurer {
-        display: block;
-        background: url(../img/measurer.png) no-repeat left;
-        background-position-y: -100px;
-        margin-bottom: 220px;
-    }
-
-    .measurer_container.container {
-        color: #363636;
-        flex-wrap: wrap;
-    }
-
-    .measurer__point {
-        width: 50%;
-        display: inline-block;
-        box-sizing: border-box;
-        padding-left: 15%;
-    }
-    .measurer__item {
-        margin-bottom: 102px;
-        display: flex;
-        align-items: center;
-    }
-
-    .measurer__item:last-child{
-        margin: 0;
-    }
-
-    .measurer__cicle {
-        font-size: 18px;
-        line-height: 25px;
-        color: #FFFFFF;
-        font-family: 'Yeseva One Regular';
-        background-color: #e3b873;
-        width: 41px;
-        height: 41px;
-        border-radius: 50%;
-        border: 8px solid #fff;
-        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 18px;
-    }
-
-    .measurer__text {
-        display: inline-block;
-        width: 65%;
-        font-size: 14px;
-        line-height: 19px;
-    }
-    .measurer__form-block {
-        display: inline-block;
-        width: 42%;
-        background-color: rgb(19, 19, 19);
-        padding: 28px 49px;
-        box-sizing: border-box;
-        margin-right: 6%;
-    }
-    .measurer_title {
-        font-size: 18px;
-        line-height: 26px;
-        text-align: center;
-        color: #FFFFFF;
-        margin-bottom: 39px;
-    }
-
-    .measurer__form.online-control-form{
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .measurer__wrapper.online-control-mobil{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        margin-right: 0;
-        width: 100%;
-    }
-
-    .measurer__item.online-form-item{
-        width: 100%;
-        display: contents;
-        margin: 0;
-    }
-
-    .measurer__input{
-        font-size: 14px;
-        line-height: 138.72%;
-        background-color: transparent;
-        border: none;
-        color: #fff;
-        padding-bottom: 8px;
-        margin-bottom: 19px;
-        border-bottom: 1px solid rgba(54, 54, 54, 0.5);
-    }
-
-    .measurer__check-label.online-label-checkbox{
-        color: #fff;
-    }
-
-    .measurer__input-label.online-label-for-input {
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-    .measurer__input::placeholder{
-        color: #fff;
-    }
-    
-    .measurer__btn.form-btn.btn{
-        padding: 18px 21px;
-        position: relative;
-        left: 60%;
-    }
-
-    .measurer_add.container{
-        justify-content: flex-end;
-    }
-
-    .measurer__discont {
-        display: flex;
-        margin-top: 38px;
-        width: 42%;
-        justify-content: center;
-        align-items: center;
-        margin-right: 6%;
-    }
-    .measurer__img {
-        background: url(../img/pig.svg) no-repeat center center;
-        width: 72px;
-        height: 72px;
-        border-radius: 50%;
-        margin-right: 25px;
-        background-color: #E3B873;
-        box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2);
-    }
-    .discont__text {
-        font-size: 18px;
-        line-height: 26px;
-        color: #E3B873; 
-        text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
-    }
-
-    /*Секция с типами ремонтов*/
-    .realize {
-        display: block;
-        background: url(../img/realize.png) no-repeat;
-        background-size: cover;
-        margin-bottom: 110px;
-    }
-
-    .type__title {
-        font-size: 27px;
-        line-height: 37px;
-        text-transform: uppercase;
-        color: #E3B873;
-        font-family: 'Yeseva One Regular';
-        margin-bottom: 47px;
-    }
-
-    .type__type {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .type__link {
-        margin-bottom: 23px;
-        width: fit-content;
-    }
-
-    .type__link:hover{
-        color: #E3B873;
-        position: relative;
-    }
-
-    .type__link:hover::after{
-        content: '';
-        height: 1px;
-        width: 100%;
-        background-color: #e3b873;
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-    }
-
-    .realize__photo {
-        display: flex;
-        width: 60%;
-    }
-
-    .photo__columns {
-        margin-right: 39px;
-        transform: scale(1.2);
-    }
-
-    .photo__columns:first-child{
-            margin-right: 15%;
-    }
-    .photo__columns:last-child{
-        transform: scale(1.2) translateY(-80px);
-    } 
-
-    .photo_item {
-        margin-bottom: 39px;
-    }
-
-    /*Секция с отзывами*/
-    .clients{
-        display: block;
-    }
-
-    .clients-wrapper.container{
-        flex-direction: column;
-    }
-
-    .clients-title {
-        font-size: 20px;
-        margin-bottom: 13px;
-        line-height: 28px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #181818;
-        font-family: 'Yeseva One Regular';
-    }
-
-    .clients-img-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        margin-bottom: 27px;
-    }
-
-    .clients-img-wrapper::before,
-    .clients-img-wrapper::after{
-        content: '';
-        position: absolute;
-        width: 32px;
-        height: 1.5px;
-        background-color: #E3B873;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-    }
-
-    .clients-img-wrapper::before{
-        left: 150%;
-    }
-
-    .clients-img-wrapper::after{
-        right: 150%;
-    }
-
-    .client-desc{
-        font-size: 18px;
-        line-height: 29px;
-        text-align: center;
-        color: #363636;
-        margin-bottom: 39px;
-    }
-
-    .clients-items {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .client-item {
-        width: 25%;
-        background: #FFFFFF;
-        padding: 24px 32px 0 20px;
-        box-sizing: border-box;
-        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
-    }
-
-    .client-title {
-        display: flex;
-        align-items: center;
-        margin-bottom: 23px;
-    }
-
-    .client-img {
-        border-radius: 50%;
-        margin-right: 20px;
-    }
-
-    .client-name {
-        font-size: 18px;
-        display: inline-block;
-        line-height: 23px;
-        color: #181818;
-        font-family: 'Yeseva One Regular';
-    }
-
-    .client-item p{
-        font-size: 13px;
-        line-height: 180%;
-        color: #959595;
-        margin-bottom: 44px;
-    }
-
-    .client-data {
-        background-color: #e3b873;
-        display: flex;
-        justify-content: space-around;
-        width: 293px;
-        height: 54px;
-        box-sizing: border-box;
-        transform: translateY(50%);
-        box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
-        padding: 0 12px 0 17px;
-        font-size: 17px;
-        line-height: 24px;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        font-family: 'Yeseva One Regular';
-    }
-
-    .data-area,
-    .data-days {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-right: 13px;
-        height: 100%;
-    }
-
-    .data-area{
-        border-right: 1px solid #fff;
-    }
-
-    .data-days{
-        padding-left: 13px;
-    }
-
-    .data-icon {
-        width: 32px;
-        height: 32px;
-        margin-right: 15px;
-    }
-
-    /*Форма остались еще вопросы?*/
-    .any-question{
-        margin: -100px 0 0 0;
-        transform: translateY(50%);
-    }
-
-    .any-question-wrapper{
-        background: #181818;
-        /* margin: 0 288px; */
-        width: 30%;
-        padding: 34px 181px;
-    }
-
-    .any-question-form{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .any-question-desktop.online-control-mobil{
-        justify-content: space-between;
-        margin: 0;
-    }
-    
-    .any-question-item.online-form-item{
-        margin: 0;
-        width: 48%;
-    }
-    
-    .online-form-item:nth-child(3){
-        width: 100%;
-    }
-
-    .any-question-input{
-        color: #fff;
-    }
-
-    .any-question-label.online-label-for-input {
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-    .any-question-label.online-form-input::placeholder{
-        color: #FFFFFF;
-    }
-
-    .any-question-input::placeholder{
-        color: #FFFFFF;
-    }
-
-    .any-question-check.online-label-checkbox {
-        color: #fff;
-        position: relative;
-        right: 0;
-        left: 0;
-        margin: auto;
-    }
-
-    /*Секция с контактами и картой*/
-    .contact{
-        background-color: black;
-        background-image: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%), url(../img/bg-form.png);
-    }
-
-    .contacts {
-        padding-top: 274px;
-        flex-direction: column-reverse;
-        background-blend-mode: overlay;
-        background-size: cover;
-    }
-
-    .contacts-title{
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .contacts-map {
-        width: 70%;
-        height: 500px;
-    }
-
-    .footer{
-        display: block;
-        padding: 48px 0;
-    }
-}
-
-@media (min-width: 1920px)
-{
-    .repair-wrapper{
-        background-color: #000;
-        background: url(../img/repair_big_bg.png) no-repeat;
-        background-size: cover;
-        transition: 0.2s;
-    }
-} 
