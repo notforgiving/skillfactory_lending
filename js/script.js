@@ -2,7 +2,7 @@ let images = [
     {
         url: "../img/prepair-completed-1.png",
         decs: "Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families",
-        city: "Rostov-on-Don LCD admiral",
+        city: "ROSTOV-ON-DON admiral",
         area: "81 m2",
         time: "3.5 months",
         cost: "Upon request"
@@ -27,11 +27,13 @@ let images = [
 
 function initSlider() {
     let sliderImages = document.querySelector(".copleted-slider-item");
+    /*Стрелки*/ 
     let prewArrow = document.querySelector(".prev_arrow");
     let nextArrow = document.querySelector(".next_arrow");
+    /*Блок с названиями городов*/
     let cities = document.querySelector(".slider-cities");
     let nameCity = document.querySelectorAll(".slider-cities-name");
-
+    /* Блоки с описанием ремонта */
     let sliderText = document.querySelector(".completed-slider-text");
     let city = document.querySelector("#city");
     let area = document.querySelector("#area");
@@ -51,7 +53,10 @@ function initSlider() {
               ${images[index].url});" data-index="${index}"></div>`;
             sliderImages.innerHTML += imageDiv;
 
-            nameCity[index].classList.add("n"+index);
+            let city = `<h3 class="slider-cities-name ${index===0? "active-cities" :""} n${index}">
+            ${image.city}
+            </h3>`;
+            cities.innerHTML +=city;
 
             dots.innerHTML += `<button class="dots n${index} ${index === 0? "dots-active" : ""}"></button>`
         });
