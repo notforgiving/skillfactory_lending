@@ -25,10 +25,12 @@ html{
 
 *,*::after,*::before{
     padding: 0;
+    transition: 0.2s;
 }
 
 h1,h2,h3,h4,h5,h6,p{
     margin: 0;
+    font-weight: normal;
 }
 
 ul,li{
@@ -36,9 +38,19 @@ ul,li{
     list-style: none;
 }
 
+section{
+    border: none;
+}
+
 button,
 button:focus{
     border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input,
+input:focus{
     outline: none;
 }
 
@@ -72,7 +84,11 @@ body{
     padding: 13px 33px;
 }
 
-@media (min-width:1440px){
+@media (min-width:1145px){
+    body{
+        background-color: #fff;
+    }
+
     .container{
         padding: 0 92px;
     }
