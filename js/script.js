@@ -65,13 +65,13 @@ function initSlider() {
     function initArrows() {
         prewArrow.addEventListener("click",function(){
           let curNumber = +sliderImages.querySelector(".active").dataset.index;
-          nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
+          let nextNumber = curNumber === 0 ? images.length - 1 : curNumber - 1;
           moveSlider(nextNumber);
         })
 
         nextArrow.addEventListener("click",function(){
           let curNumber = +sliderImages.querySelector(".active").dataset.index;
-          nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
+          let nextNumber = curNumber === images.length - 1 ? 0 : curNumber + 1;
           moveSlider(nextNumber);
         })
     }
