@@ -72,6 +72,16 @@
   margin-top: 26px;
 }
 
+.repair-btn:active {
+  border: 1px solid #fff;
+}
+.repair-btn:visited {
+  border: 1px solid #fff;
+}
+.repair-btn:focus {
+  border: 1px solid #fff;
+}
+
 /*Секция со слайдером про завершенный ремонт*/
 
 .conpleted-block {

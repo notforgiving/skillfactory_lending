@@ -105,3 +105,19 @@ function initSlider() {
 document.addEventListener("DOMContentLoaded", function () {
     initSlider();
 });
+
+$(document).ready(function () {
+    $("a").not('policy').on("click", function (e) {
+      var anchor = $(this);
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: $(anchor.attr("href")).offset().top,
+          },
+          300
+        );
+      e.preventDefault();
+      return false;
+    });
+  });
