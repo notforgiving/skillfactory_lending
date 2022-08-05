@@ -1,6 +1,6 @@
 let images = [
     {
-        url: "../img/prepair-completed-1.png",
+        url: "./img/prepair-completed-1.png",
         decs: "Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families",
         city: "ROSTOV-ON-DON admiral",
         area: "81 m2",
@@ -8,7 +8,7 @@ let images = [
         cost: "Upon request"
     },
     {
-        url: "../img/realize-2.jpg",
+        url: "./img/realize-2.jpg",
         decs: "1Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families1",
         city: "SOCHI THIEVES",
         area: "50 m2",
@@ -16,7 +16,7 @@ let images = [
         cost: "Upon request"
     },
     {
-        url: "../img/realize-3.jpg",
+        url: "./img/realize-3.jpg",
         decs: "2Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families2",
         city: "ROSTOV-ON-DON PATRIOTIC",
         area: "35 m2",
